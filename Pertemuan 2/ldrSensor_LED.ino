@@ -8,6 +8,6 @@ void setup() {
 }
 
 void loop() {
-  int intensitasCahaya = map(analogRead(ldrSensor), 1023, 0, 0, 255); //untuk membaca nilai sensor LDR dan mapping ke rentangan nilai 0-255
+  int intensitasCahaya = map(analogRead(ldrSensor), 0, 1023, 0, 255); //untuk membaca nilai sensor LDR dan mapping ke rentangan nilai 0-255
   analogWrite(led, intensitasCahaya);
 }
