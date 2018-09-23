@@ -11,9 +11,11 @@ void setup() {
 void loop() {
     // put your main code here, to run repeatedly:
     int valSensor = analogRead(sensorPin);
+    Serial.println(valSensor);
     if(valSensor >900){
         digitalWrite(pumpPin, LOW); //turn on the pump
     }else {
         digitalWrite(pumpPin, HIGH); //turn off the pump
     }
+    delay(1000);
 }
